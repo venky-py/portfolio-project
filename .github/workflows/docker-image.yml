@@ -20,7 +20,7 @@ jobs:
         PASS: ${{ secrets.PASS }}       
       run: |     
        
-        docker build . --file Dockerfile --tag venky2504/portfolio-project
+        docker build . --file Dockerfile --tag venky2504/portfolio
         docker login -u $USER -p $PASS        
-        docker push venky2504/portfolio-project
+        docker push venky2504/portfolio
         cat /etc/os-release
