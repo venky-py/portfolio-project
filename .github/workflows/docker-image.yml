@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      env:
+        USER: ${{ secrets.USER }}
+        PASS: ${{ secrets.PASS }}       
+      run: |     
+       
+        docker build . --file Dockerfile --tag venky2504/portfolio-project
+        docker login -u $USER -p $PASS        
+        docker push venky2504/portfolio-project
+        cat /etc/os-release
