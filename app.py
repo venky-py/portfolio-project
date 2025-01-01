@@ -5,7 +5,7 @@ app = Flask(__name__)
 # Sample data for two individuals
 individuals = {
     "individual1": {
-        "name": "John Doe",
+        "name": "Venky",
         "roll_no": "12345",
         "projects": [
             {"title": "Project A", "description": "This is the description for Project A."},
@@ -13,7 +13,7 @@ individuals = {
         ]
     },
     "individual2": {
-        "name": "Jane Smith",
+        "name": "Adarsh",
         "roll_no": "67890",
         "projects": [
             {"title": "Project X", "description": "This is the description for Project X."},
